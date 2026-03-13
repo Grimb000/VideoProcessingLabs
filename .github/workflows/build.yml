@@ -8,10 +8,10 @@ jobs:
 
     steps:
       - name: Скачать код
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Установить Python
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@v5
         with:
           python-version: "3.11"
 
@@ -22,7 +22,7 @@ jobs:
         run: pyinstaller --onefile lab1/lab_video_part2.py
 
       - name: Сохранить EXE
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: lab_video_part2_exe
           path: dist/lab_video_part2.exe
